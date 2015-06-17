@@ -5,6 +5,7 @@ var User     = require('./models/user');
 
 // environment variables can be set in fig.yml
 // mongodb configuration
+var config = {};
 config.mongodb = {
   hostname: process.env.MONGO_PORT_27017_TCP_ADDR || "localhost",
   database: process.env.MONGO_DATABASE || "blog",
