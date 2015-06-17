@@ -4,9 +4,15 @@ var initDB   = require('./initDB');
 var User     = require('./models/user');
 
 // environment variables can be set in fig.yml
+// mongodb configuration
+config.mongodb = {
+  hostname: process.env.MONGO_PORT_27017_TCP_ADDR || "localhost",
+  database: process.env.MONGO_DATABASE || "blog",
+  port: process.env.MONGO_PORT_27017_TCP_PORT || "27017"
+}
 
+var MONGO_URI = "mongodb://" + config.mongodb.hostname + ":" + config.mongodb.port + "/" + config.mongodb.database;
 var PORT      = process.env.PORT      || 8080;
-var MONGO_URI = process.env.MONGO_URI || 'mongodb://192.168.59.103:27017/example';
 var NUM_USERS = process.env.NUM_USERS || 10;
 
 var dataReady = new mongoose.Promise(); // resolves when db is done initializing
