@@ -28,7 +28,7 @@ docker build -t targun/nmd .
 ```
 3. Connect application to DB
 ```
-docker run -p 8080:80  --name some-app --link some-mongo:mongo -d targun/nmd
+docker run -it --name some-app -P --link some-mongo:mongo targun
 ```
 
 ## Building & running your droplet
