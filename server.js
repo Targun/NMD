@@ -6,7 +6,7 @@ var User     = require('./models/user');
 // environment variables can be set in fig.yml
 
 var PORT      = process.env.PORT      || 8080;
-var MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/example';
+var MONGO_URI = process.env.MONGO_URI || 'mongodb://45.55.93.243:27017/example';
 var NUM_USERS = process.env.NUM_USERS || 10;
 
 var dataReady = new mongoose.Promise(); // resolves when db is done initializing
