@@ -28,7 +28,7 @@ docker build -t targun/nmd .
 ```
 3. Connect application to DB
 ```
-docker run -it --name some-app -P --link some-mongo:mongo targun
+docker run -it --name some-app -P --link some-mongo:mongo -d targun/nmd
 ```
 
 ## Building & running your droplet
@@ -37,6 +37,16 @@ docker run -it --name some-app -P --link some-mongo:mongo targun
 2. root into your digital ocean machine with:
 ```
 ssh root@0.0.0.0
+```
+3. Pull all the requirments
+```
+docker pull mongo
+```
+```
+docker pull node
+```
+```
+docker pull targun/nmd
 ```
 
 ## Handy Commands
