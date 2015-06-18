@@ -55,6 +55,7 @@ docker pull targun/nmd
 - docker stop <name || id>
 - docker ps [-a includes stopped containers]
 - docker rm <name || id>
+- docker exec -it <name> bash
 
 
 Test image command:
